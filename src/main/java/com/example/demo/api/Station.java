@@ -8,8 +8,14 @@ import java.util.List;
 @XmlRootElement(name = "station")
 public class Station {
 
+    @XmlElement(name = "shortcode")
     private String ril100; //<shortcode> Die Abkürzung für den Bahnhof(2-5 Zeichen)
+
+    @XmlElement(name = "name")
     private String name; //Stationsname
+
+    @XmlElementWrapper(name = "tracks")
+    @XmlElement(name = "track")
     private List<Track> tracks; //Gleis
 
     //Getter and Setter
@@ -40,9 +46,14 @@ public class Station {
     public void setTracks(List<Track> tracks) {
         this.tracks = tracks;
     }
+}
 
     class Track {
+        @XmlElement(name = "number")
         private int number;
+
+        @XmlElementWrapper(name = "trains")
+        @XmlElement(name = "train")
         private List<Train> trains;
 
         //Getter and Setter
@@ -67,7 +78,12 @@ public class Station {
     }
 
     class Train {
+        @XmlElementWrapper(name = "trainNumbers")
+        @XmlElement(name = "trainNumber")
         private List<Integer> trainNumbers;
+
+        @XmlElementWrapper(name = "waggons")
+        @XmlElement(name = "waggon")
         private List<Waggon> waggons;
 
         //Getter and Setter
@@ -93,7 +109,11 @@ public class Station {
     }
 
     class Waggon {
+        @XmlElement(name = "position")
         private int position; //Waggon number
+
+        @XmlElementWrapper(name = "sections")
+        @XmlElement(name = "identifier")
         private List<String> sections;
 
 
@@ -106,7 +126,7 @@ public class Station {
         public void setPosition(int position) {
             this.position = position;
         }
-        
+
         @XmlElementWrapper(name = "sections")
         @XmlElement(name = "identifier")
         public List<String> getSections() {
@@ -120,6 +140,6 @@ public class Station {
 
     }
 
-}
+
 
 
