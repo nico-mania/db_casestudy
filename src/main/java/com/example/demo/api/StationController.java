@@ -15,7 +15,7 @@ public class StationController {
 
     @GetMapping("/station")
     Station station() throws XMLStreamException, IOException {
-        InputStream xmlResource = StationController.class.getClassLoader().getResourceAsStream("xml/AA_2017-11-30_10-07-58.xml");
+        InputStream xmlResource = StationController.class.getClassLoader().getResourceAsStream("xml/0Test.xml");
         XMLInputFactory xmlInputFactory = javax.xml.stream.XMLInputFactory.newFactory();
         XMLStreamReader xmlStreamReader = xmlInputFactory.createXMLStreamReader(xmlResource);
 

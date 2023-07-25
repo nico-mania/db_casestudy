@@ -9,7 +9,7 @@ import java.util.List;
 public class Station {
 
     @XmlElement(name = "shortcode")
-    private String ril100; //<shortcode> Die Abkürzung für den Bahnhof(2-5 Zeichen)
+    private String shortcode; //<shortcode> Die Abkürzung für den Bahnhof(2-5 Zeichen)
 
     @XmlElement(name = "name")
     private String name; //Stationsname
@@ -20,12 +20,12 @@ public class Station {
 
     //Getter and Setter
     @XmlElement(name = "shortcode")
-    public String getRil100() {
-        return ril100;
+    public String getShortcode() {
+        return shortcode;
     }
 
-    public void setRil100(String ril100) {
-        this.ril100 = ril100;
+    public void setShortcode(String shortcode) {
+        this.shortcode = shortcode;
     }
 
     @XmlElement(name = "name")
