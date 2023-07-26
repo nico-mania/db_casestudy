@@ -1,6 +1,5 @@
 package com.example.demo.api;
 
-import com.example.demo.api.Station;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.GetMapping;
