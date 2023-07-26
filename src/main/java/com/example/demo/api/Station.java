@@ -9,17 +9,17 @@ import java.util.List;
 public class Station {
 
     @XmlElement(name = "shortcode")
-    private String shortcode; //<shortcode> Die Abkürzung für den Bahnhof(2-5 Zeichen)
+    private String shortcode; //also Ril100
 
     @XmlElement(name = "name")
-    private String name; //Stationsname
+    private String name; //Station name
 
     @XmlElement(name = "validity")
     private String validity;
 
     @XmlElementWrapper(name = "tracks")
     @XmlElement(name = "track")
-    private List<Track> tracks; //Gleis
+    private List<Track> tracks;
 
     //Getter and Setter
     @XmlElement(name = "shortcode")
@@ -65,7 +65,7 @@ public class Station {
         private String name;
 
         @XmlElement(name = "number")
-        private int number;
+        private String number;
 
         @XmlElementWrapper(name = "trains")
         @XmlElement(name = "train")
@@ -85,11 +85,11 @@ public class Station {
         }
 
         @XmlElement(name = "number")
-        public int getNumber() {
+        public String getNumber() {
             return number;
         }
 
-        public void setNumber(int number) {
+        public void setNumber(String number) {
             this.number = number;
         }
 
@@ -218,7 +218,7 @@ public class Station {
 
     class Waggon {
         @XmlElement(name = "position")
-        private int position; //Waggon number
+        private int position;
 
         @XmlElement(name = "isWaggon")
         private int isWaggon;
