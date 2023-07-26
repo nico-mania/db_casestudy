@@ -49,7 +49,7 @@ public class StationController {
     private Station getStationData() {
         try {
             // Load the XML file as an InputStream
-            InputStream xmlResource = StationController.class.getClassLoader().getResourceAsStream("xml/0Test.xml");
+            InputStream xmlResource = StationController.class.getClassLoader().getResourceAsStream("xml/AA_2017-11-30_10-07-58.xml");
 
             // Create an XmlMapper instance
             XmlMapper xmlMapper = new XmlMapper();
